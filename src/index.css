@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-zinc-800 font-ubuntu;
+}
+
+.border-gradient {
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right, rgb(255, 166, 0), rgb(183, 0, 255)) 1;
+}
+
+.social-boxshadow {
+  box-shadow: 0 0 8px #3b82f6;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.glow:hover {
+  @apply text-white social-boxshadow transition-all duration-300;
+}
