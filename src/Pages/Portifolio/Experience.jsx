@@ -1,5 +1,5 @@
-import ExperienceCard from '../ExperienceCard'
-import Habilities from '../Habilities'
+import ExperienceCard from '../../components/ExperienceCard'
+import Habilities from '../../components/Habilities'
 
 const Experience = () => {
   const expereinceData = [

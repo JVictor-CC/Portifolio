@@ -1,4 +1,4 @@
-import StudiesCard from '../StudiesCard'
+import StudiesCard from '../../components/StudiesCard'
 
 const Studies = () => {
   const expereinceData = [

@@ -1,20 +1,20 @@
 import { useState, useEffect } from 'react'
-import ThemeToggler from '../components/ThemeToggler'
-import About from '../components/Portifolio/About'
-import Experience from '../components/Portifolio/Experience'
-import Projects from '../components/Portifolio/Projects'
-import Studies from '../components/Portifolio/Studies'
-import SocialSidebar from '../components/SocialSidebar'
-import SocialTab from '../components/SocialTab'
+import ThemeToggler from '../../components/ThemeToggler'
+import About from './About'
+import Experience from './Experience'
+import Projects from './Projects'
+import Studies from './Studies'
+import SocialSidebar from '../../components/SocialSidebar'
+import SocialTab from '../../components/SocialTab'
 import { motion } from 'framer-motion'
-import Profile from '../assets/perfil_720p.jpg'
+import Profile from '../../assets/perfil_720p.jpg'
 
 const Portifolio = () => {
   const [activeSection, setActiveSection] = useState('')
 
   const animation = (delay) => ({
     hidden: { x: -100, opacity: 0 },
-    visible: { x: 0, opacity: 1 },
+    visible: { x: 0, opacity: 1, transition: { duration: 0.5, delay: delay } },
   })
 
   useEffect(() => {

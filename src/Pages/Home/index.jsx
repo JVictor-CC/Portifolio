@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
-import SocialSidebar from '../components/SocialSidebar'
+import SocialSidebar from '../../components/SocialSidebar'
 import { motion } from 'framer-motion'
-import { AuroraBackground } from '../components/ui/AuroraBackground'
-import ThemeToggler from '../components/ThemeToggler'
+import { AuroraBackground } from '../../components/ui/AuroraBackground'
+import ThemeToggler from '../../components/ThemeToggler'
 
 const Home = () => {
   return (
