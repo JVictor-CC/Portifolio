@@ -1,23 +1,38 @@
 import { Link } from 'react-router-dom'
-import SocialSidebar from '../components/Social/SocialSidebar'
+import SocialSidebar from '../components/SocialSidebar'
+import { motion } from 'framer-motion'
+import { AuroraBackground } from '../components/ui/AuroraBackground'
+import ThemeToggler from '../components/ThemeToggler'
 
 const Home = () => {
   return (
-    <main className="h-screen w-full flex flex-col justify-center items-center text-zinc-100">
+    <>
+      <ThemeToggler />
       <SocialSidebar />
-      <div className="flex flex-col gap-2 justify-center items-center">
-        <h1 className="font-afacadflux text-4xl md:text-5xl italic">João Victor de Souza</h1>
-        <h2 className="text-sm md:text-base">Desenvolvedor FullStack</h2>
-        <div className="flex gap-2 m-6 text-center">
-          <Link
-            to={'/portifolio'}
-            className="glow min-w-40 px-3 py-1 border border-blue-500 rounded-md"
-          >
-            Portifólio
-          </Link>
-        </div>
-      </div>
-    </main>
+      <AuroraBackground>
+        <motion.main
+          initial={{ opacity: 0.0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.3,
+            duration: 0.8,
+            ease: 'easeInOut',
+          }}
+          className="relative flex flex-col gap-4 items-center justify-center px-4"
+        >
+          <div className="flex flex-col justify-center items-center dark:text-zinc-100 text-zinc-700">
+            <h1 className="font-afacadflux text-4xl md:text-5xl italic">João Victor de Souza</h1>
+            <h2 className="text-sm md:text-base">Desenvolvedor FullStack</h2>
+            <Link
+              to={'/portifolio'}
+              className="glow min-w-40 mt-8 px-3 py-1 text-center border border-blue-500 rounded-md"
+            >
+              Portifólio
+            </Link>
+          </div>
+        </motion.main>
+      </AuroraBackground>
+    </>
   )
 }
 
