@@ -5,13 +5,13 @@ import { motion } from 'framer-motion'
 const SocialTab = () => {
   const animation = (delay) => ({
     hidden: { x: -100, opacity: 0 },
-    visible: { x: 0, opacity: 1 },
+    visible: { x: 0, opacity: 1, transition: { duration: 0.5, delay: delay } },
   })
 
   return (
     <nav
       aria-label="Social Media Links"
-      className="border-b-2 pb-1 border-zinc-500 dark:border-zinc-300"
+      className="border-b-[1px] pb-2 border-zinc-500 dark:border-zinc-300"
     >
       <ul className="flex items-center justify-center space-x-2 dark:text-zinc-300 text-zinc-500">
         <motion.li variants={animation(0.8)} initial="hidden" animate="visible">

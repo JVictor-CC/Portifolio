@@ -1,17 +1,14 @@
 import { motion } from 'framer-motion'
+import { animation } from '../lib/framerAnimations'
 
 const ExperienceCard = ({ date, enterprise, position, description }) => {
-  const animation = (delay) => ({
-    hidden: { x: 100, opacity: 0 },
-    visible: { x: 0, opacity: 1, transition: { duration: 0.5, delay: delay } },
-  })
-
   return (
     <div className="p-6 rounded-lg hover:shadow-lg w-full hover:bg-white hover:dark:bg-zinc-800 transition-all duration-300">
       <motion.div
         variants={animation(0.1)}
         whileInView="visible"
         initial="hidden"
+        viewport={{ once: true }}
         className="flex justify-between items-center"
       >
         <p className="text-sm text-gray-500 dark:text-gray-400">{date}</p>
@@ -28,6 +25,7 @@ const ExperienceCard = ({ date, enterprise, position, description }) => {
         variants={animation(0.15)}
         whileInView="visible"
         initial="hidden"
+        viewport={{ once: true }}
         className="text-xl font-semibold mt-2 text-zinc-800 dark:text-zinc-100"
       >
         {position}
@@ -36,6 +34,7 @@ const ExperienceCard = ({ date, enterprise, position, description }) => {
         variants={animation(0.2)}
         whileInView="visible"
         initial="hidden"
+        viewport={{ once: true }}
         className="mt-4 text-sm text-zinc-600 dark:text-zinc-400"
       >
         {description}
