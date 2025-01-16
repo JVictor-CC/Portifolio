@@ -4,11 +4,11 @@ import Portifolio from './Pages/Portifolio'
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/Portifolio/',
     element: <Home />,
   },
   {
-    path: '/portifolio',
+    path: '/Portifolio/cv',
     element: <Portifolio />,
   },
 ])
